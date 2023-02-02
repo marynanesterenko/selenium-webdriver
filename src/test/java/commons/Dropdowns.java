@@ -27,6 +27,9 @@ public class Dropdowns extends CommonMethods{
         // countriesDropdown.getOptions() method returns a List<WebElement> of all the option tags that are children
         List<WebElement> optionsList = countriesDropDown.getOptions();
 
+        // this is a way we can get the dropdown item under a particular index
+        optionsList.get(0).getText();
+
         // enhanced for loop which will cycle through the list of countries we have in out dropdown
         for (WebElement option : optionsList){
             System.out.println(option.getText());
