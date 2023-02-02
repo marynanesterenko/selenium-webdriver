@@ -18,6 +18,9 @@ public class BrowserNavigation extends DayOne {
 
         driver.navigate().to("http://18.116.88.132:8080/bank/login");
         Thread.sleep(3000);
+
+        driver.navigate().back();
+        Thread.sleep(3000);
     }
 
 
