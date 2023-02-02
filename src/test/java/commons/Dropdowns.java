@@ -8,6 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import javax.sound.midi.Soundbank;
 import java.util.List;
 
 public class Dropdowns extends CommonMethods{
@@ -19,6 +20,7 @@ public class Dropdowns extends CommonMethods{
         driver.navigate().to("https://www.globalsqa.com/demo-site/select-dropdown-menu/");
         Thread.sleep(3000);
         WebElement dropdown = driver.findElement(By.xpath("//select"));
+        WebElement selectCountryTitle = driver.findElement(By.id("Select Country"));
 
         //Select class has a constructor with parameter WebElement therefore we need to pass an element to the class
         // the element we pass it should be the dropdown we want to manipulate
@@ -27,12 +29,21 @@ public class Dropdowns extends CommonMethods{
         // countriesDropdown.getOptions() method returns a List<WebElement> of all the option tags that are children
         List<WebElement> optionsList = countriesDropDown.getOptions();
 
+        // to duplicate the line use Ctrl+D
+        // NOTE: your cursor has to be at the end of the line as you are doing the Ctrl+D
+        System.out.println(selectCountryTitle.getAttribute("id"));
+        System.out.println(selectCountryTitle.getAttribute("class"));
+        System.out.println(selectCountryTitle.getAttribute("aria-controls"));
+        System.out.println(selectCountryTitle.getAttribute("role"));
+
+        System.out.println("-----------------------");
+
         // this is a way we can get the dropdown item under a particular index
         optionsList.get(0).getText();
 
         // enhanced for loop which will cycle through the list of countries we have in out dropdown
         for (WebElement option : optionsList){
-            System.out.println(option.getText());
+            System.out.println(option.getText() + "\t" + option.getAttribute("value"));
         }
 
         System.out.println(countriesDropDown.getOptions());
