@@ -21,16 +21,9 @@ import utils.DriverUtils;
 
 public class Homework_Jan30 extends DriverUtils {
 
-    WebDriver driver;
-
-    @Before
-    public void setUp(){
-        createDriver("https://www.saucedemo.com/");
-    }
-
     @Test
     public void login() throws InterruptedException{
-        driver = getDriver();
+        WebDriver driver = getDriver();
 
         // Login Page
         WebElement usernameInput = driver.findElement(By.id("user-name"));
@@ -50,6 +43,11 @@ public class Homework_Jan30 extends DriverUtils {
         WebElement addedTshirt = driver.findElement(By.className("inventory_item_name"));
         Assert.assertTrue("Test.allTheThings() T-Shirt (Red) has not been added to the cart", addedTshirt.isDisplayed());
 
+    }
+
+    @Before
+    public void setUp(){
+        createDriver("https://www.saucedemo.com/");
     }
 
     @After

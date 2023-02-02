@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
-import javax.sound.midi.Soundbank;
 import java.util.List;
 
 public class Dropdowns extends CommonMethods{
@@ -19,6 +18,7 @@ public class Dropdowns extends CommonMethods{
 
         driver.navigate().to("https://www.globalsqa.com/demo-site/select-dropdown-menu/");
         Thread.sleep(3000);
+
         WebElement dropdown = driver.findElement(By.xpath("//select"));
         WebElement selectCountryTitle = driver.findElement(By.id("Select Country"));
 

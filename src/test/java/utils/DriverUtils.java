@@ -1,15 +1,13 @@
 package utils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-// This is the Main page
-// this is a package for any utilities we need to set up
-
 public class DriverUtils {
 
-    // instance variable
     private static WebDriver driver;
 
     public void createDriver(String url) {
@@ -28,5 +26,19 @@ public class DriverUtils {
     // getter method for our driver variable, because it is "private"
     public WebDriver getDriver(){
         return driver;
+    }
+
+    public void loginToSauceDemo(){
+
+        WebDriver driver = getDriver();
+
+        //findElement is the method that looks up for the element in the page source by using different locators
+        WebElement usernameInput = driver.findElement(By.id("user-name"));
+        WebElement passwordInput = driver.findElement(By.id("password"));
+
+        WebElement loginButton = driver.findElement(By.id("login-button"));
+        usernameInput.sendKeys("standard_user");
+        passwordInput.sendKeys("secret_sauce");
+        loginButton.click(); // at this point we are logged on
     }
 }
