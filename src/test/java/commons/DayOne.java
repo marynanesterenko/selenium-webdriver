@@ -4,7 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-// This is the Main paige
+// This is the Main page of
 
 public class DayOne {
 

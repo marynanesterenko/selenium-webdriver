@@ -9,18 +9,20 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
 import java.time.Duration;
 
 public class BrowserSynchronization extends DayOne{
+
+    //pre-condition
     @Before
     public void setUp(){
         createDriver("https://demoqa.com/progress-bar");
     }
 
     @Test
-    public void learnWaits() {
+    public void performWaits() {
         WebDriver driver = getDriver();
+
         WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));

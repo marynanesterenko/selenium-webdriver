@@ -19,7 +19,7 @@ public class FileUpload extends DayOne{
     // this is out test method
     // with this test we can verify the file upload functionality works
     @Test
-    public void learnFileUpload() throws InterruptedException {
+    public void uploadFile() throws InterruptedException {
 
         // Step 1: we have to do this, because in DayOne Class, the "driver" variable is "private"
         // since we cannot access that variable from here, we have to override "getDriver" method from DayOne Class
@@ -45,7 +45,6 @@ public class FileUpload extends DayOne{
         Assert.assertEquals("C:\\fakepath\\TestFile.txt", actual);
         Assert.assertTrue(confirmation.isDisplayed());
     }
-
     @After
     public void cleanUp(){
         quitDriver();
