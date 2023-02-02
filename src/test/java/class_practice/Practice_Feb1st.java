@@ -9,6 +9,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+/*
+1. Open sauce demo and log in
+2. Assert that the shopping cart button is visible and then click the shopping cart button
+3. Assert that the checkout button is visible
+4. Then go back to the products page add an item to cart
+5. Then back to cart page and assert that the item is there
+ */
 public class Practice_Feb1st extends CommonMethods {
 
     @Test

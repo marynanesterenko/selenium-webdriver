@@ -1,4 +1,4 @@
-package homework;
+package homeworks;
 
 /*
 1. Create a homework package
