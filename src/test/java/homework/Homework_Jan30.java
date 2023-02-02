@@ -10,7 +10,6 @@ package homework;
 6. Verify that the item you added to cart .isDisplayed() in the cart page
  */
 
-import commons.DayOne;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;
@@ -18,8 +17,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utils.DriverUtils;
 
-public class Homework_Jan30 extends DayOne {
+public class Homework_Jan30 extends DriverUtils {
 
     WebDriver driver;
 

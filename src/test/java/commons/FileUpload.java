@@ -7,8 +7,9 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utils.DriverUtils;
 
-public class FileUpload extends DayOne{
+public class FileUpload extends DriverUtils {
 
     //pre-condition
     @Before
@@ -21,8 +22,8 @@ public class FileUpload extends DayOne{
     @Test
     public void uploadFile() throws InterruptedException {
 
-        // Step 1: we have to do this, because in DayOne Class, the "driver" variable is "private"
-        // since we cannot access that variable from here, we have to override "getDriver" method from DayOne Class
+        // Step 1: we have to do this, because in DriverUtils Class, the "driver" variable is "private"
+        // since we cannot access that variable from here, we have to override "getDriver" method from DriverUtils Class
         // and assign it's return value, which is the new Chromedriver Object, to current Class's "driver" variable
         WebDriver driver = getDriver();
 

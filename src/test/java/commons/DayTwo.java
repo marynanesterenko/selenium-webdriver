@@ -7,9 +7,11 @@ import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import utils.DriverUtils;
+
 import java.util.List;
 
-public class DayTwo extends DayOne {
+public class DayTwo extends DriverUtils {
 
     // this is a pre-condition, opens the ChromeBrowser
     @Before

@@ -4,8 +4,9 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import utils.DriverUtils;
 
-public class BrowserNavigation extends DayOne {
+public class BrowserNavigation extends CommonMethods {
     //pre-condition
     @Before
     public void setUp(){
@@ -20,6 +21,17 @@ public class BrowserNavigation extends DayOne {
         Thread.sleep(3000);
 
         driver.navigate().back();
+        Thread.sleep(3000);
+
+        // this method will refresh the page
+        driver.navigate().refresh();
+        Thread.sleep(3000);
+    }
+
+    @Test
+    public void practice1() throws InterruptedException {
+        WebDriver driver = getDriver();
+        loginToSauceDemo();
         Thread.sleep(3000);
     }
 

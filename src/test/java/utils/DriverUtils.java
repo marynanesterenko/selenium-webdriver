@@ -1,17 +1,17 @@
-package commons;
+package utils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-// This is the Main page of
+// This is the Main page
+// this is a package for any utilities we need to set up
 
-public class DayOne {
+public class DriverUtils {
 
     // instance variable
     private static WebDriver driver;
 
-    //
     public void createDriver(String url) {
         System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
         driver = new ChromeDriver(); // "driver" is an Object of the Interface "WebDriver"
