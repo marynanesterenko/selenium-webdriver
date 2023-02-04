@@ -29,6 +29,7 @@ public class FileUpload extends DriverUtils {
 
         // Step 2: we have to find the "uploadFile" button on our WebPage
         // and here we are doing it with the help of .findElement() method and cssSelector
+        // (fileuploadinput is an instance of the WebElement
         WebElement fileUploadInput = driver.findElement(By.cssSelector("#uploadFile"));
 
         // Step 3: we have to attach the file after we click the "uploadFile" button on our WebPage

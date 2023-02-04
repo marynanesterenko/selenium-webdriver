@@ -20,6 +20,4 @@ public abstract class CommonMethods extends DriverUtils {
         passwordInput.sendKeys("secret_sauce");
         loginButton.click(); // at this point we are logged on
     }
-
-
 }
