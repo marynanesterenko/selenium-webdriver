@@ -11,7 +11,7 @@ public class DriverUtils {
     private static WebDriver driver;
 
     public void createDriver(String url) {
-        System.setProperty("webdriver.chrome.driver", "src/test/java/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/java/drivers/chromedriver.exe");
         driver = new ChromeDriver(); // "driver" is an Object of the Interface "WebDriver"
         driver.get(url); // opens up the URL of the Web App, that we want to test
         driver.manage().window().maximize();
