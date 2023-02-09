@@ -50,7 +50,6 @@ public class HandlingIFrames extends CommonMethods{
     public void cleanUp(){
         quitDriver();
 
-
 }
 
 }
