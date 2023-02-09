@@ -34,8 +34,8 @@ public class Homework_Feb7 extends CommonMethods {
 
         WebDriver driver = getDriver();
         WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(5));
-
         Actions actionsObj = new Actions(driver);
+
         WebElement saleBtn = driver.findElement(By.xpath("//a[@id='ui-id-8']/span"));
 
         actionsObj.keyDown(Keys.CONTROL).click(saleBtn).keyUp(Keys.CONTROL).build().perform();
@@ -53,7 +53,6 @@ public class Homework_Feb7 extends CommonMethods {
                             driverWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.xpath("//div[@class='block-promo-wrapper block-promo-3columns']/a")));
                     for (WebElement promotionsList : promotions) {
                         Assert.assertTrue("the elements are not present", promotionsList.isDisplayed());
-                        driver.close();
                     }
                 } else {
                     driver.close();
