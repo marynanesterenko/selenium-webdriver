@@ -9,7 +9,19 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
-public class class04_Feb3rd_DropdownHandling extends CommonMethods{
+/**
+ * Questions:
+ * How do we handle dropdown web element in Selenium?
+ * We use the Select interface:
+ * 1. When we create an instance of this interface to work with it
+ * 2. We can use a List and put all of the options in that List by using the .getOptions() method.
+ * 3. We can then manipulate the elements in the List created by using the same methods that we use for WebElements
+      as the List created will be a List of WebElements (List<WebElement>)
+ * 4. We can select different options in the dropdown by various different methods.
+ * 5. We can select an item by the visible text, value, and the index of the item
+ * 6. We have a bunch of deselecting options such as deselecting by index, deselecting by value, deselecting by text, etc
+ */
+public class class05_Feb3rd_DropdownHandling extends CommonMethods{
 
     @Test
     public void learnDropdowns() throws InterruptedException{

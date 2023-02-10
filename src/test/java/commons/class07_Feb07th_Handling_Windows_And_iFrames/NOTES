@@ -1,0 +1,8 @@
+Wed, 07Feb2023
+
+REVISION
+1. What is Selenium’s Javascript Executor interface and what does it do?
+   - the JavaScript Executor Interface in Selenium can be used to perform javascript code in the selenium browser session;
+   - there are some things Selenium can’t handle on its own, so we can usually handle these situations using JSExecutor;
+   - since JSExecutor is an Interface and ChromeDriver Class implements it,
+     we can create an instance of this Interface by using JavaScriptExecutor: jsExecutor = (JavaScriptExecutor) driver;

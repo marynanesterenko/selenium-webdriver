@@ -1,0 +1,36 @@
+Wed, 08Feb2023
+
+REVISION:
+1. How can we handle multiple tabs/windows with Selenium?
+   In order to handle multiple tabs/windows with Selenium, we can use the following methods:
+   - driver.getWindowHandle() - returns the window handle String for the currently active window;
+   - driver.getWindowHandles() - returns a Set of all the currently open window handle Strings,
+     we usually turn this set into an ArrayList so that it is easier to manipulate;
+   - driver.switchTo.window() - will switch to the window handle which is passed as an argument to the method
+
+2. How can we pick the exact window we want to switch to?
+    1. The strategy would be to find the windowHandle of the current or primary window and store it to a String variable
+    2. Then we would get an ArrayList of all the window handles
+    3. We then iterate through the ArrayList using a loop
+    4. We also need to add if conditions in the for loop in order to verify various values to ensure the window we are switching to is the one we want to
+
+3. How can we go back from whatever window we are on to the original or primary window?
+    1. Save the primary window handle in a String by using the .getWindowHandle() method
+    2. After we are done manipulating the other window we can switch back to the primary window by using the saved String variable
+    1. We can also use the driver.switchTo().defaultContent() which will bring us to the very first parent/primary window that we started from
+
+4. What is an iFrame?
+    iFrame is an element, that essentially holds a separate HTML document. “A document inside of a document”
+
+5. How can we handle an iFrame using selenium?
+    1. We can use the driver.switchTo().frame()
+        1. The frame method has a couple different implementations. You can pass a WebElement iFrame
+        a index of the iFrame, otherwise the id or name of the iframe
+
+    After switching to an iFrame how can we go back to the parent frame
+    1. We can use the driver.switchTo().parentFrame() in order to go to the direct parent of the current frame.
+    How can we get back to the primary parent if we are in a nested iFrame (If we are inside of an iframe
+    That’s inside of another iFrame)
+    1. We can use the driver.switchTo().parentFrame() multiple times as necessary to make it back
+    To the primary frame
+    2. We can use driver.switchTo().defaultContent() which will bring us to the primary frame

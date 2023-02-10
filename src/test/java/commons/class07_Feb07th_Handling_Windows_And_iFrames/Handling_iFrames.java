@@ -1,5 +1,6 @@
-package commons;
+package commons.class07_Feb07th_Handling_Windows_And_iFrames;
 
+import commons.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class HandlingIFrames extends CommonMethods{
+public class Handling_iFrames extends CommonMethods {
 
     @Test
     public void learnIframeHandling () throws InterruptedException {

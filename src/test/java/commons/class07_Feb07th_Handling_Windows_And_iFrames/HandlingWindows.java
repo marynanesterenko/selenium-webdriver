@@ -1,5 +1,6 @@
-package commons;
+package commons.class07_Feb07th_Handling_Windows_And_iFrames;
 
+import commons.CommonMethods;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -13,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.ArrayList;
 import java.util.Set;
 
-public class HandlingWindows extends CommonMethods{
+public class HandlingWindows extends CommonMethods {
     @Test
     public void learnWindowHandling() throws InterruptedException{
         WebDriver driver = getDriver();
