@@ -1,5 +1,6 @@
-package commons;
+package commons.class05_Feb03_Advanced_Mouse_Interactions;
 
+import commons.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +22,7 @@ import java.util.List;
  * 5. We can select an item by the visible text, value, and the index of the item
  * 6. We have a bunch of deselecting options such as deselecting by index, deselecting by value, deselecting by text, etc
  */
-public class class05_Feb3rd_DropdownHandling extends CommonMethods{
+public class Handling_Dropdowns extends CommonMethods {
 
     @Test
     public void learnDropdowns() throws InterruptedException{

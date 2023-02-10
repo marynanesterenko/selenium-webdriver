@@ -1,4 +1,4 @@
-package commons.class06_Feb06th_JavaScriptExecutor_Interface;
+package commons.class06_Feb06_JavaScriptExecutor_Interface;
 
 import commons.CommonMethods;
 import org.junit.After;

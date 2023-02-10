@@ -8,7 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class Practice_Feb6 extends CommonMethods {
+public class class06_practice_Feb06th extends CommonMethods {
 
     @Test
     public void fillOutForm () {

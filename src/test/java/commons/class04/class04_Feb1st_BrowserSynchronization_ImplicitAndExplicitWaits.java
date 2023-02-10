@@ -1,4 +1,4 @@
-package commons;
+package commons.class04;
 
 import org.junit.After;
 import org.junit.Assert;
