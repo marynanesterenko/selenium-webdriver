@@ -1,6 +1,6 @@
 package commons.class07_Feb07_Handling_Windows_And_iFrames;
 
-import commons.CommonMethods;
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

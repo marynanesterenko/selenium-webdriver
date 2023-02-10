@@ -1,11 +1,10 @@
 package commons.class05_Feb03_Advanced_Mouse_Interactions;
 
-import commons.CommonMethods;
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -43,20 +42,6 @@ public class Double_Click_Action extends CommonMethods {
         // to move the "mouse" to the element and then perform the double click
         actions.moveToElement(doubleClickBtn).doubleClick().build().perform();
         Thread.sleep(3000);
-    }
-
-    @Test
-    public void learnScroll() throws InterruptedException {
-        WebDriver driver = getDriver();
-        Actions actions = new Actions(driver);
-
-        driver.navigate().to("https://www.saucedemo.com/inventory.html");
-        loginToSauceDemo();
-        WebElement footer = driver.findElement(By.className("footer_copy"));
-        actions.scrollToElement(footer).build().perform();
-        Thread.sleep(3000);
-
-        actions.scrollByAmount(0, 500).build().perform();
     }
 
     @Before

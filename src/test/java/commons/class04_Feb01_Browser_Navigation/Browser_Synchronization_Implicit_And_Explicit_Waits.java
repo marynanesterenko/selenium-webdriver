@@ -1,4 +1,4 @@
-package commons.class04;
+package commons.class04_Feb01_Browser_Navigation;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -32,7 +32,7 @@ import java.time.Duration;
  * file we want to upload. Then we use the .sendKeys() with the file path in order to upload the file.
  * Example: element.sendKeys(“Users/fakeuser/Pictures/sdet.png”);
  */
-public class class04_Feb1st_BrowserSynchronization_ImplicitAndExplicitWaits extends DriverUtils {
+public class Browser_Synchronization_Implicit_And_Explicit_Waits extends DriverUtils {
 
     @Test
     public void performWaits() {

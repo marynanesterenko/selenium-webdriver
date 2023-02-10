@@ -1,6 +1,6 @@
 package homeworks;
 
-import commons.CommonMethods;
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import junit.framework.Assert;
 import org.junit.After;
 import org.junit.Before;

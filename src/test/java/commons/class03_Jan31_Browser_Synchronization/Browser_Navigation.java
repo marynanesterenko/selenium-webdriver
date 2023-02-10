@@ -1,12 +1,12 @@
-package commons;
+package commons.class03_Jan31_Browser_Synchronization;
 
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
-import utils.DriverUtils;
 
-public class BrowserNavigation extends CommonMethods {
+public class Browser_Navigation extends CommonMethods {
     //pre-condition
     @Before
     public void setUp(){

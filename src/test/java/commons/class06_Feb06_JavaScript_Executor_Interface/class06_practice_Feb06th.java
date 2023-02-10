@@ -1,6 +1,6 @@
-package class_practice;
+package commons.class06_Feb06_JavaScript_Executor_Interface;
 
-import commons.CommonMethods;
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

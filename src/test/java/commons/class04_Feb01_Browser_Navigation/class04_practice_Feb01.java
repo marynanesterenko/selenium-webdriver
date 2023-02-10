@@ -1,6 +1,6 @@
-package class_practice;
+package commons.class04_Feb01_Browser_Navigation;
 
-import commons.CommonMethods;
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 4. Then go back to the products page add an item to cart
 5. Then back to cart page and assert that the item is there
  */
-public class class04_practice_Feb01st extends CommonMethods {
+public class class04_practice_Feb01 extends CommonMethods {
 
     @Test
     public void practice1() throws InterruptedException {

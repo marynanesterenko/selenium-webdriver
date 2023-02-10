@@ -1,4 +1,4 @@
-package commons;
+package commons.class03_Jan31_Browser_Synchronization;
 
 import junit.framework.Assert;
 import org.junit.After;
