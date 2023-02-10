@@ -32,7 +32,7 @@ import java.time.Duration;
  * file we want to upload. Then we use the .sendKeys() with the file path in order to upload the file.
  * Example: element.sendKeys(“Users/fakeuser/Pictures/sdet.png”);
  */
-public class class04_BrowserSynchronization_ImplicitAndExplicitWaits extends DriverUtils {
+public class class04_Feb1st_BrowserSynchronization_ImplicitAndExplicitWaits extends DriverUtils {
 
     @Test
     public void performWaits() {

@@ -16,7 +16,7 @@ import org.openqa.selenium.WebElement;
 4. Then go back to the products page add an item to cart
 5. Then back to cart page and assert that the item is there
  */
-public class Practice_Feb1st extends CommonMethods {
+public class class04_practice_Feb1st extends CommonMethods {
 
     @Test
     public void practice1() throws InterruptedException {
