@@ -12,6 +12,26 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.DriverUtils;
 import java.time.Duration;
 
+/**
+ What are some differences between implicit and explicit wait?
+ Implicit wait:
+ * 1. When we are using Implicit Wait - we are specifying a duration for a single web element to be visible
+ * 2. Can be changed anywhere throughout our code using driver.mange.timeouts.implicitlyWait()
+ * 3. Implicit wait applies specifically to all WebElements that are using it
+ * 4. Different syntax: driver.manage.timeouts.implicitlyWait(int time)
+
+ Explicit wait:
+ * 1. when we are using Explicit Wait - we are waiting for a specific condition to be true(meaning something needs to happen on the Web Page) with a specified duration
+ * 2. Can only be changed using the WebDriverWait class
+ * 3. Explicit wait applies to a particular scenario (could be WebElement could be url, text, etc)
+ * 4. Different syntaxL WebDriverWait driverWait = new WebDriverWait(WebDriver driver, Duration ofTime)
+ Used like: driverWait.until(ExpectedConditions.condition());
+
+ File upload using Selenium:
+ * We first need to find the input element for the file upload, then we need to find the path to the
+ * file we want to upload. Then we use the .sendKeys() with the file path in order to upload the file.
+ * Example: element.sendKeys(“Users/fakeuser/Pictures/sdet.png”);
+ */
 public class class04_BrowserSynchronization_ImplicitAndExplicitWaits extends DriverUtils {
 
     @Test
@@ -44,6 +64,7 @@ public class class04_BrowserSynchronization_ImplicitAndExplicitWaits extends Dri
         // so that we can wait for textToBePresentInElement() condition to be true
         // !NOTE: if the condition is true before the time is up it will not wait for the full time
         driverWait.until(ExpectedConditions.textToBePresentInElement(progressBar, "100"));
+
         System.out.println(progressBar.getText());
         Assert.assertTrue("Value does not match expected" + expectedValue, progressBar.getText().contains("100") );
     }
