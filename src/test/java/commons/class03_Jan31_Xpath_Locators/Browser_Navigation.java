@@ -1,6 +1,6 @@
-package commons.class03_Jan31_Browser_Synchronization;
+package commons.class03_Jan31_Xpath_Locators;
 
-import commons.class04_Feb01_Browser_Navigation.CommonMethods;
+import commons.class04_Feb01_CSS_Locators.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,6 +1,5 @@
-package commons.class04_Feb01_Browser_Navigation;
+package commons.class04_Feb01_CSS_Locators;
 
-import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;

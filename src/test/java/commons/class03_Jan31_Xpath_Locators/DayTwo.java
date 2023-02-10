@@ -1,4 +1,4 @@
-package commons.class03_Jan31_Browser_Synchronization;
+package commons.class03_Jan31_Xpath_Locators;
 
 import junit.framework.Assert;
 import org.junit.After;

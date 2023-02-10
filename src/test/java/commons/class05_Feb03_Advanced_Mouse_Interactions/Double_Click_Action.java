@@ -1,6 +1,6 @@
 package commons.class05_Feb03_Advanced_Mouse_Interactions;
 
-import commons.class04_Feb01_Browser_Navigation.CommonMethods;
+import commons.class04_Feb01_CSS_Locators.CommonMethods;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;

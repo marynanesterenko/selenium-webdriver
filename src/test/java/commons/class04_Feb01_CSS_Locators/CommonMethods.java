@@ -1,4 +1,4 @@
-package commons.class04_Feb01_Browser_Navigation;
+package commons.class04_Feb01_CSS_Locators;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

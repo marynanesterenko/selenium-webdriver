@@ -1,4 +1,4 @@
-package commons.class02_Jan30_Basic_Locators;
+package commons.class02_Jan27_Basic_Locators;
 
 /*
 1. Create a homework package

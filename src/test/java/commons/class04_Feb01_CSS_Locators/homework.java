@@ -1,4 +1,4 @@
-package commons.class04_Feb01_Browser_Navigation;
+package commons.class04_Feb01_CSS_Locators;
 
 import org.junit.After;
 import org.junit.Assert;
