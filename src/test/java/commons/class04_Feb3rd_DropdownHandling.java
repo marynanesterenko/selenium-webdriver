@@ -7,10 +7,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
-
 import java.util.List;
 
-public class Dropdowns extends CommonMethods{
+public class class04_Feb3rd_DropdownHandling extends CommonMethods{
 
     @Test
     public void learnDropdowns() throws InterruptedException{
@@ -22,15 +21,7 @@ public class Dropdowns extends CommonMethods{
         WebElement dropdown = driver.findElement(By.xpath("//select"));
         WebElement selectCountryTitle = driver.findElement(By.id("Select Country"));
 
-        //Select class has a constructor with parameter WebElement therefore we need to pass an element to the class
-        // the element we pass it should be the dropdown we want to manipulate
-        Select countriesDropDown = new Select(dropdown);
-
-        // countriesDropdown.getOptions() method returns a List<WebElement> of all the option tags that are children
-        List<WebElement> optionsList = countriesDropDown.getOptions();
-
-        // to duplicate the line use Ctrl+D
-        // NOTE: your cursor has to be at the end of the line as you are doing the Ctrl+D
+        // to duplicate the line use Ctrl+D. !NOTE: your cursor has to be at the end of the line as you are doing the Ctrl+D
         System.out.println(selectCountryTitle.getAttribute("id"));
         System.out.println(selectCountryTitle.getAttribute("class"));
         System.out.println(selectCountryTitle.getAttribute("aria-controls"));
@@ -38,19 +29,27 @@ public class Dropdowns extends CommonMethods{
 
         System.out.println("-----------------------");
 
-        // this is a way we can get the dropdown item under a particular index
+        // Select Class has a Constructor with parameter WebElement, therefore we need to pass an element to the Class
+        // the element we pass, should be the dropdown we want to manipulate
+        Select countriesDropDown = new Select(dropdown);
+
+        // countriesDropdown.getOptions() method returns a List<WebElement> of all the option tags that are children
+        //to the current select tag
+        List<WebElement> optionsList = countriesDropDown.getOptions();
+
+        // using this syntax, we can retrieve the name of the dropdown option under a particular index
         optionsList.get(0).getText();
 
-        // enhanced for loop which will cycle through the list of countries we have in out dropdown
+        // Cycling through a list of options created on line 38 and printing the text stored inside the tag and the
+        // attribute "value"
         for (WebElement option : optionsList){
             System.out.println(option.getText() + "\t" + option.getAttribute("value"));
         }
-
         System.out.println(countriesDropDown.getOptions());
         System.out.println(dropdown.getText());
 
         //Select Class has a lot of different methods that do various different things such as selecting a specific
-        // options in side of the select tag, returning a specific value, and etc.
+        //options in side of the select tag, returning a specific value, and etc.
         countriesDropDown.selectByVisibleText("Bermuda");
         Thread.sleep(3000);
     }
