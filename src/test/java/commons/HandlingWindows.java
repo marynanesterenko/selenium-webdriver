@@ -22,6 +22,8 @@ public class HandlingWindows extends CommonMethods{
         WebElement tabButton = driver.findElement(By.id("tabButton"));
         WebElement windowButton = driver.findElement(By.id("windowButton"));
 
+        //.getWindowHandle() returns the String window handle of the current window
+        //Here we are saving the window handle of the current window as a String variable so that we can return to it later
         String primaryWindow = driver.getWindowHandle();
 
         tabButton.click();
