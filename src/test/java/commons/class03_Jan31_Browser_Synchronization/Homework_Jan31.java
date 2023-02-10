@@ -1,4 +1,4 @@
-package homeworks;
+package commons.class03_Jan31_Browser_Synchronization;
 
 import org.junit.After;
 import org.junit.Assert;

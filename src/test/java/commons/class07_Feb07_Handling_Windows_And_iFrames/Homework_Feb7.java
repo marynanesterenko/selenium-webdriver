@@ -1,4 +1,4 @@
-package homeworks;
+package commons.class07_Feb07_Handling_Windows_And_iFrames;
 
 import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import junit.framework.Assert;

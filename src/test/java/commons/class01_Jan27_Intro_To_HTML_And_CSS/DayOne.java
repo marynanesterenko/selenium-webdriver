@@ -1,4 +1,12 @@
-public class DayOne {
+package commons.class01_Jan27_Intro_To_HTML_And_CSS;
+
+import commons.class04_Feb01_Browser_Navigation.CommonMethods;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
+
+public class DayOne extends CommonMethods {
     private static WebDriver driver;
 
     public void createDriver(String url){

@@ -1,4 +1,4 @@
-package homeworks;
+package commons.class04_Feb01_Browser_Navigation;
 
 import org.junit.After;
 import org.junit.Assert;
@@ -19,7 +19,7 @@ import utils.DriverUtils;
 OPTIONAL advanced task:
 5. Before refreshing the page ensure that the first item is indeed the cheapest one.
  */
-public class Homework_Feb1 extends DriverUtils {
+public class homework extends DriverUtils {
 
     @Test
     public void verifyFilter() throws InterruptedException{

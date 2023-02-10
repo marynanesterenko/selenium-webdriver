@@ -1,0 +1,6 @@
+Mon, 30Jan2023
+
+AGENDA:
+1. Understanding basic locators (id, classname, name, link text, partial link text, tag, etc.)
+2. Practice using some of the basic locators
+3. Start some basic Browser automation with the use of these locators on the Digital Bank Website http://18.116.88.132:8080/bank/login

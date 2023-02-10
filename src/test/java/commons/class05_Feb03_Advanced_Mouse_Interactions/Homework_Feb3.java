@@ -1,4 +1,4 @@
-package homeworks;
+package commons.class05_Feb03_Advanced_Mouse_Interactions;
 
 import commons.class04_Feb01_Browser_Navigation.CommonMethods;
 import org.junit.After;
