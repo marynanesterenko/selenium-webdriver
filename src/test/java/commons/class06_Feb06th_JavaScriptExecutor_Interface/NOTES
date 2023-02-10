@@ -1,0 +1,20 @@
+Mon, 06Feb2023
+
+REVISION:
+1. How can we perform advanced mouse interactions in Selenium?
+   - we can use the Actions class by creating an Object of that Class;
+   - with this Object we can use the various methods that exist in the Actions Class;
+   - we can chain different methods together in sequence and use .build() .perform() to perform the sequence;
+
+2. What are some of the methods in the Actions class and what do they do?
+    - keyUp() - is used to release a specific Key on the keyboard essentially undoing keyDown()
+    - keyDown() - is used to hold down or “press” a specific Key on the keyboard
+    - scrollToElement() - lets you scroll to the WebElement passed as a parameter to this method
+    - scrollByAmount() - lets you scroll by a specific amount of x and y pixels
+    - moveToElement() - is used to move the “cursor” to a specific WebElement which is passed as a paramter
+    - dragAndDrop() - will take the first argument of WebElement and drop it on the second WebElement argument
+    - dragAndDropBy() - will take a WebElement and move it by an amount of pixels on the x and y axis
+    - doubleClick() - this method will perform a double click (2 fast sequential clicks)
+    - contextClick() - this method will perform a right click (context click) on the passed WebElement
+    - build() - used when calling a sequence of events to “build the sequence”
+    - perform() - used to actually perform the sequence of events

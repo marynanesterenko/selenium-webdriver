@@ -14,7 +14,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.ArrayList;
 import java.util.Set;
 
-public class HandlingWindows extends CommonMethods {
+public class Handling_Multiple_Browser_Windows_And_Tabs extends CommonMethods {
     @Test
     public void learnWindowHandling() throws InterruptedException{
         WebDriver driver = getDriver();
