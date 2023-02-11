@@ -20,6 +20,7 @@ public class Handling_Multiple_Browser_Windows extends CommonMethods {
         WebDriver driver = getDriver();
 
         driver.navigate().to("https://demoqa.com/browser-windows");
+
         WebElement tabButton = driver.findElement(By.id("tabButton"));
         WebElement windowButton = driver.findElement(By.id("windowButton"));
 
@@ -32,6 +33,7 @@ public class Handling_Multiple_Browser_Windows extends CommonMethods {
 
         Thread.sleep(3000);
 
+        //Here we are taking the return type Set<String> and casting it to an ArrayList<String> for easy access
         Set<String> windowSet = driver.getWindowHandles();
         ArrayList <String> windowList = new ArrayList<>(windowSet);
 
@@ -42,46 +44,47 @@ public class Handling_Multiple_Browser_Windows extends CommonMethods {
                 driver.switchTo().window(window);
                 WebElement header = driver.findElement(By.tagName("h1"));
                 System.out.println(header.getText());
+                //This method is different from driver.quit() it closes the specific window that is currently active
                 driver.close();
             }
         }
-
         driver.switchTo().window(primaryWindow);
         Thread.sleep(3000);
     }
 
     @Test
     public void windowHandlingExample() throws InterruptedException{
-
         WebDriver driver = getDriver();
+
         driver.navigate().to("https://magento.softwaretestingboard.com/");
 
         Actions actions = new Actions(driver);
 
         String primaryWindow = driver.getWindowHandle();
+
         WebElement shopNewYogaBtn = driver.findElement(By.xpath("//span[contains(text(),'Shop New Yoga')]"));
 
         actions.keyDown(Keys.CONTROL).click(shopNewYogaBtn).keyUp(Keys.CONTROL).build().perform();
 
+        //Since driver.getWindowHandles() method returns a set of window handles we can pass it to the constructor
+        //of the arraylist which will cast it into an ArrayList
         ArrayList <String> windowList = new ArrayList<>(driver.getWindowHandles());
-
         for (String windowHandle : windowList){
             if (!windowHandle.equals(primaryWindow)){
                 driver.switchTo().window(windowHandle);
-
                 if(driver.getCurrentUrl().contains("/collections/yoga-new.html")){
                     driver.close();
                 }
             }
         }
-
+        //Here on out we are in a new window
         WebElement category = driver.findElement(By.xpath("//li[@class='item category8']/strong"));
-        Assert.assertTrue("Category does not match expected", category.getText().equalsIgnoreCase("new luma yoga collection"));
 
+        Assert.assertTrue("Category does not match expected", category.getText().equalsIgnoreCase("new luma yoga collection"));
         Thread.sleep(3000);
 
-        driver.close();
-        driver.switchTo().window(primaryWindow);
+        driver.close(); //Closing the current tab
+        driver.switchTo().window(primaryWindow); //Switching to the original window
 
         shopNewYogaBtn = driver.findElement(By.xpath("//span[contains(text(),'Shop New Yoga')]"));
         Assert.assertTrue("Shop new yoga button not visible", shopNewYogaBtn.isDisplayed());

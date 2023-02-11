@@ -67,7 +67,7 @@ public class Handling_Alerts extends CommonMethods{
         // Thread.sleep(1000);
 
         button4.click();
-        // we do not really need the DriverWait here, but it is a good approach1_practice_and_homework to utilize it
+        // we do not really need the DriverWait here, but it is a good approach to utilize it
         // in case if there is something going on with the website, that is slowing down it's performance
         // it is good to explicitly wait for the condition we are looking for to become true
         driverWait.until(ExpectedConditions.alertIsPresent());
