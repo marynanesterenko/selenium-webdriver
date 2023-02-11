@@ -45,6 +45,9 @@ public class Handling_Alerts extends CommonMethods{
         alert.dismiss(); // this is where we click "Cancel"
         Thread.sleep(3000);
 
+        // the 2nd and the 3rd lines of this block can be replaced with the following line:
+        // Alert alert1 = driverWait.until(ExpectedConditions.alertIsPresent());
+        // because the .alertIsPresent() returns the entire driver.switchTo().alert() if the try statement within it passes
         button3.click();
         driverWait.until(ExpectedConditions.alertIsPresent());
         alert = driver.switchTo().alert();
@@ -56,6 +59,12 @@ public class Handling_Alerts extends CommonMethods{
         WebElement okConfirmation = driver.findElement(By.id("confirmResult"));
         Assert.assertTrue("you did not accept the alert", okConfirmation.getText().equalsIgnoreCase("You selected Ok"));
         Thread.sleep(3000);
+        // Charlie's implementation of the button3 dismissed alert assertion:
+        // ... below lines are after the sout statement in line 55...
+        // alert.dismiss();
+        // WebElement selectionResult = driver.findElement(By.cssSelector("#confirmResult"));
+        // Assert.assertTrue("User did not select Ok/accept the alert", selectionResult.getText().equalsIgnoreCase("You selected ok"));
+        // Thread.sleep(1000);
 
         button4.click();
         // we do not really need the DriverWait here, but it is a good practice to utilize it
@@ -75,10 +84,19 @@ public class Handling_Alerts extends CommonMethods{
         Assert.assertTrue("you did not enter the text and accept the alert", entryTextConfirmation.getText().equalsIgnoreCase("You entered Hello World"));
         Thread.sleep(3000);
 
-        // Jasur's approach for button4 assertion:
+        // Jasur's approach for button4 accepted alert assertion:
+        // ... below lines are after the Thread.sleep() statement in line 80...
+        // alert.accept();
         // WebElement success = driver.findElement(By.xpath("//span[text()='Jasur Kadyrov']"));
         // Assert.assertTrue("Message is not matching", success.isDisplayed());
         // Thread.sleep(3000);
+
+        // Charlies implementation for button4 accepted alert assertion:
+        // ... below lines are after the Thread.sleep() statement in line 80...
+        // alert.accept();
+        // WebElement promptResult = driver.findElement(By.cssSelector("#promptResult"));
+        // Assert.assertTrue("User did not type 'Hello World' in the alert", promptResult.getText().equalsIgnoreCase("You entered Hello World"));
+        // Thread.sleep(1000);
     }
 
     @Before
