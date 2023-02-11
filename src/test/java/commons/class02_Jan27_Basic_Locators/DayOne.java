@@ -1,6 +1,6 @@
 package commons.class02_Jan27_Basic_Locators;
 
-import commons.class04_Feb01_CSS_Locators.CommonMethods;
+import commons.class05_Feb01_CSS_Locators.CommonMethods;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 

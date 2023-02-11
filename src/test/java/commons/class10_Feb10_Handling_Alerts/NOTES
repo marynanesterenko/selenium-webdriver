@@ -1,0 +1,15 @@
+Fri, 10Feb2023
+
+AGENDA:
+Learn how to handle alerts
+
+REVISION:
+1. What is Page Object Model and what are it's benefits?
+   - POM is a design principle where we create a Java Class for each page of the website;
+   - we use this Class to store all of the Web Elements on the page and any methods, that may use the Web Elements;
+3. Also helps to avoid code redundancy - we can reuse the same methods multiple times
+In different scenarios. The page classes essentially function as a “CommonMethods”
+Class for the page.
+4. Improves maintenance - By organizing the pages into class we can easily find
+Exactly what method is failing. “Where any failures are”
+5. Helps to keep the framework scalable. We can constantly grow and expand it
