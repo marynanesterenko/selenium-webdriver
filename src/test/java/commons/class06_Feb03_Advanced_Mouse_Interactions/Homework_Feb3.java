@@ -25,7 +25,7 @@ Optional Brain Twister Homework
 In a new Homework Class open this page: https://phptravels.com/demo/
 Fill out and submit the form (You need to solve the expression in order to properly submit the form and the numbers change everytime you load the page)
 Once you successfully submit assert that you are on the success screen
-This is a pretty big homework with lots of practice if you can't finish all of it at least try as much as you can (At the very least practice the parts you feel weaker on). You should be able to practice topics such as dropdowns, actions class, and a LOT of locator practice. I advise you try to challenge yourself with locators.
+This is a pretty big homework with lots of approach1_practice_and_homework if you can't finish all of it at least try as much as you can (At the very least approach1_practice_and_homework the parts you feel weaker on). You should be able to approach1_practice_and_homework topics such as dropdowns, actions class, and a LOT of locator approach1_practice_and_homework. I advise you try to challenge yourself with locators.
 Have a great weekend everyone you are all doing very well. Feel free to let me know if you have any questions on the homework or need any clarification!
  */
 public class Homework_Feb3 extends CommonMethods {
