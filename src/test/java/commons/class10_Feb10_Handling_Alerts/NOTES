@@ -14,7 +14,5 @@ Class for the page.
 Exactly what method is failing. “Where any failures are”
 5. Helps to keep the framework scalable. We can constantly grow and expand it
 
-IMPORTANT:
-We cannot use the Thread.sleep() at our framework!
-
-After selecting the option from the dropdown, the iFrame refreshing and therefore the id is changing as well
+!!IMPORTANT NOTE:
+We cannot use the Thread.sleep() at our framework, because it will significantly slow down our test run time

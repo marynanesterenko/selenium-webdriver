@@ -50,7 +50,7 @@ public class approach4_practice_and_homework_successful extends CommonMethods {
         dropdownOptions.selectByVisibleText("- Alerts");
 
         // we need to paste these two lines because the moment we select the "Alerts" from the dropdown,
-        // the iframe gets refreshed, and we need to sort of re-find the locator of the frame again
+        // the iframe gets refreshed, and we need to sort of "re-find" the locator of the frame again
         // so that Selenium can proceed to locating the "Click Me" button
         driver.switchTo().defaultContent();
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='frm1']")));
