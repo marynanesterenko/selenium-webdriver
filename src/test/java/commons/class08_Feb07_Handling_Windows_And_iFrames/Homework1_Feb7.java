@@ -27,7 +27,7 @@ Homework 1
 5. Close the tab and switch back to the primary tab
 6. Assert that you are back on the landing page
  */
-public class Homework_Feb7 extends CommonMethods {
+public class Homework1_Feb7 extends CommonMethods {
 
     @Test
     public void learnWindowHandlingHW() {
