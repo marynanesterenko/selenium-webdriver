@@ -1,0 +1,18 @@
+Wed, 15Feb2023
+
+AGENDA:
+1. Get an overview of Selenium Grid
+2. Set up remote testing run in our framework using SauceLabs
+
+REVISION:
+
+
+1. What is the Selenium Grid?
+
+- how do we set it up?
+- where does the Jenkins comes into place
+
+Selenium Grid - is a server that is provided by the Selenium suite, which we use to achieve parallelism in our testing.
+We can run our tests
+
+SauceLabs - remote automation testing in the cloud

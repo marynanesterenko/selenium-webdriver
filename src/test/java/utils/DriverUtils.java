@@ -1,4 +1,5 @@
 package utils;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,7 +12,8 @@ public class DriverUtils {
     private static WebDriver driver;
 
     public void createDriver(String url) {
-        System.setProperty("webdriver.chrome.driver", "src/test/java/drivers/chromedriver.exe");
+        // WebDriverManager essentially removes the need to manually manage any drivers (meaning to set property for each driver)
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver(); // "driver" is an Object of the Interface "WebDriver"
         driver.get(url); // opens up the URL of the Web App, that we want to test
         driver.manage().window().maximize();

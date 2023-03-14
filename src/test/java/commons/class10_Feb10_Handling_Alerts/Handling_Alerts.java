@@ -21,6 +21,8 @@ public class Handling_Alerts extends CommonMethods{
         WebDriver driver = getDriver();
         // below line is the explicit wait syntax
         WebDriverWait driverWait = new WebDriverWait(driver, Duration.ofSeconds(30));
+
+        // creating locators
         WebElement button1 = driver.findElement(By.id("alertButton"));
         WebElement button2 = driver.findElement(By.id("timerAlertButton"));
         WebElement button3 = driver.findElement(By.id("confirmButton"));
@@ -74,7 +76,7 @@ public class Handling_Alerts extends CommonMethods{
         alert = driver.switchTo().alert();
         Thread.sleep(3000);
         // .sendKeys() method will type in whatever String we pass to it into te input of the alert
-        // NOTE: we will not be able to see the test being typed, it sends the message to the Alert itself
+        // NOTES: we will not be able to see the test being typed, it sends the message to the Alert itself
         // and not to the input field, and then the moment we accept the alert - it accepts the Task
         alert.sendKeys("Hello World");
         Thread.sleep(3000);
