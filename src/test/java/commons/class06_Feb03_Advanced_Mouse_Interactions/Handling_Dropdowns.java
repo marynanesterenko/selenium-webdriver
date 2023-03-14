@@ -34,7 +34,7 @@ public class Handling_Dropdowns extends CommonMethods {
         WebElement dropdown = driver.findElement(By.xpath("//select"));
         WebElement selectCountryTitle = driver.findElement(By.id("Select Country"));
 
-        // to duplicate the line use Ctrl+D. !NOTE: your cursor has to be at the end of the line as you are doing the Ctrl+D
+        // to duplicate the line use Ctrl+D. !NOTES: your cursor has to be at the end of the line as you are doing the Ctrl+D
         System.out.println(selectCountryTitle.getAttribute("id"));
         System.out.println(selectCountryTitle.getAttribute("class"));
         System.out.println(selectCountryTitle.getAttribute("aria-controls"));

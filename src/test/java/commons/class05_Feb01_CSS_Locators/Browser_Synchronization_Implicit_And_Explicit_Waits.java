@@ -62,7 +62,7 @@ public class Browser_Synchronization_Implicit_And_Explicit_Waits extends DriverU
 
         // here we are using our "driverWait" variable to call "until()" method,
         // so that we can wait for textToBePresentInElement() condition to be true
-        // !NOTE: if the condition is true before the time is up it will not wait for the full time
+        // !NOTES: if the condition is true before the time is up it will not wait for the full time
         driverWait.until(ExpectedConditions.textToBePresentInElement(progressBar, "100"));
 
         System.out.println(progressBar.getText());

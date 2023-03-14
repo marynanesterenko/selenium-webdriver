@@ -1,0 +1,149 @@
+Tue, 14Feb2023
+
+AGENDA:
+1. Learn and understand what some of the most common selenium exceptions mean and how to debug
+2. Practice/Review where needed
+
+# Q: if we have to manually change the browser name every time, how can we achieve parallel testing?.. we need to use Java Multi-Threading
+# config.properties -> ConfigReader.java -> Login.feature -> LoginSteps.java -> LoginPage.java
+
+# Questions to Roma:
+# 1. Is it a good practice to store the login credentials inside the config.properties file?
+
+# what to do when the test runs via the runner, but not via the feature file?
+# Q: if we have to manually change the browser name every time, how can we achieve parallel testing?.. we need to use Java Multi-Threading
+# config.properties -> ConfigReader.java -> Login.feature -> LoginSteps.java -> LoginPage.java
+
+# Questions to Roma:
+# 1. Is it a good practice to store the login credentials inside the config.properties file?
+# what to do when the test runs via the runner, but not via the feature file?
+
+REVIEW:
+What is a .properties file?
+1. Properties files are a type of text file that holds key and value pairs
+2. Syntax: key = value
+
+Why do we need a .properties file in our framework?
+1. We use the file to store specific data in the key/value pairs
+2. We store all of the data in one file so that we can see it all in one place therefore
+We don’t have to look through tons of different classes to find the data
+
+What does the initalizeProperties() method we created in ConfigReader class do?
+1. It initializes the Properties object variable with the path to our .properties file
+
+What does the getConfigProperty(String key) method do?
+1. This method will get us a specific property from the .properties file with the provided key
+
+What is the point of setting up different test runners in our framework?
+1. Having different test runners allows us to run different sets of feature files/scenarios
+2. We can use tags in order to pick specific scenarios that we can run
+3. Can be used to run smoke/regression suite on local machine
+
+What is the bonigarcia WebDriverManager dependency and why do we need it?
+1. It helps us with driver management.
+2. We no longer need to install different drivers respectively we can now just use the drivers
+Provided in the library
+
+3. We no longer need to use System.setProperties() instead we can just use
+WebDriverManager.chromedriver().setup() in order to set up drivers
+
+CLASS NOTES:
+Exceptions:
+Checked Exceptions - Are compile time exceptions which we must handle via try catch or throws in order for the program to start RunTime.
+IntelliJ usually lets us know that we need to handle a method that throws a checked exception
+
+Examples:
+IOException
+SQLException
+FileNotFoundException
+Unchecked Exceptions - Are run time exceptions which can happen whenever there is something wrong within the code during run time
+Examples:
+NullPointerException
+ArrayIndexOutOfBoundsException
+ArithmeticException
+Selenium Common Exceptions:
+
+NoSuchWindowException - When the window we are trying to switch().to() does not
+Exist. This usually happens if the list of window handles isn’t updated
+After the windows have been closed or a new window has been opened. It’s
+When code is unable to find the window on the webpage to switch
+How can we debug?
+We can make sure that the window is properly being referenced is being properly
+Opened and still exists at the time we are trying to switch to it. If it still exists
+And we can’t switch to it. That might indicate that the List of window handles
+Has not been updated or the index we are retrieving is not correct.
+--------
+NoSuchFrameException - This usually happens when there is an issue entering a specific
+Frame. For example if the locator to the frame is wrong we will get this
+NoSuchFrameException when trying to switch().to().frame() the frame. This can also happen
+If a frame has been reloaded and we have not explicitly specified that we want to be
+In that frame. If the web element contains iframe it will also throw NoSuchFrameException
+How can we debug?
+We would debug this similarly to how we debug NoSuchWindowFoundException where we would
+Try to ensure that the frame exists, the locator is correct, and that we can enter the frame
+From the current frame.
+--------
+NoSuchElementException - This usually happens when selenium is unable to find a element in
+The current frame with the locator provided. This can also happen if a WebElement is inside
+Of a different frame/window.
+How can we debug?
+We would debug this by manually checking the locator and ensuring that the element is being
+Found. If we still get the exception after checking the locator we need to ensure that the
+Element is in the active frame.
+-------
+NoAlertPresentException - Happens when the browser is trying to switch().to() an alert
+And the alert either does not exist or has not showed up yet.
+How can we debug?
+We can debug this by ensuring that the alert has adequate time to load via using ExplicitWait
+And we also need to manually check and ensure the alert is showing up after the expected
+Actions.
+-------
+InvalidSelectorException - Usually means the actual Syntax of the selector is incorrect. For
+Example if you use By.css and pass a xpath selector you will get this exception
+How can we debug?
+We would debug this by checking where we defined the locator for the WebElement and ensuring
+That we are using the proper syntax for the locator selection
+-------
+TimeoutException - Happens when you specify a wait/timeout for a specific condition and time
+If that condition does not equal true within the wait time a TimeoutException will be thrown
+How can we debug?
+We would need to ensure that we have adequate wait time (we give whatever condition we are
+Waiting for enough time to load) and that the condition CAN be true after our previous actions
+-------
+ElementNotVisibleException - Happens when we try to interact with an element that is either being
+Overlapped by other element or is simply invisible/hidden.
+How can we debug?
+We can debug this by ensuring that we have taken the steps necessary to see the element. We can
+Also force the element to be visible using JavaScriptExecutor
+-------
+ElementNotSelectableException - Happens whenever an element exists on the page in the current frame
+But cannot be selected
+How can we debug?
+We would debug this by ensuring we have taken the necessary steps in order to be able to select the
+Element
+-------
+NoSuchSessionException - Happens when the referenced driver session has been closed and therefore
+Can no longer be accessed.
+How can we debug?
+We can debug this by ensuring that the code we are trying to execute happens while the session is
+Still open.
+-------
+StaleElementReferenceException - This exception is thrown whenever an element which originally
+Existed in the Dom no longer exists. This can happen due to page switch, frame switch, or if the
+Element is deleted from the page.
+How can we debug?
+We would have to ensure that the element still in fact exists on the current frame/window. If
+And we are still receiving this exception we would need to reinitialize the WebElement.
+-------
+ElementNotInteractableException - will happen if an action is performed on an element which is
+Currently not intractable. This can happen if certain condition have to be met before an element
+Is intractable
+How can we debug?
+We have to make sure that we have met all the condition in order for the element to be intractable
+And that the element is visible in the page view
+-------
+ElementClickInterceptedException - happens when the element clicked is obscuring the REQUESTED
+To be clicked on. So if an element is covering the element we want to CLICK
+How can we debug?
+We would have to make sure that elements are not block the element we are trying to click. This
+sometimes happens with ads so we can scroll so that the ads are no longer block the element.

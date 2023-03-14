@@ -1,0 +1,24 @@
+Mon, 13Feb2023
+
+AGENDA:
+1. Implement Bonigarcia WebDriverManager into our Framework
+2. Implement a config.properties file with some test/driver data
+3. Set up runner files
+
+REVISION:
+How can we handle alerts using Selenium?
+1. We can handle alerts using the Alert Interface
+2. In order to manipulate an alert we need to create an instance of the Alert Interface
+
+What are the methods inside of Alert interface and what do they do?
+1. Alert.dismiss() - it will dismiss the alert. If there are two options on the alert
+Such as accept or cancel. In that case the dismiss() method will select cancel.
+2. Alert.accept() - it will select either the accept instead of cancel option or just close the alert
+In the case that there aren’t two options
+3. Alert.getText() - which is returns the message inside of the alert
+4. Alert.sendKeys() - is used to send a string of characters to the alert input IF THERE IS ONE
+
+How can we create an instance of the Alert interface?
+1. Alert alert = driver.switchTo().alert();
+2. Alert alert = driverWait.until(ExpectedConditions.alertIsPresent()); - Kills two birds with one stone since
+The ExpectedConditions.alertIsPresent() method returns driver.switchTo().alert() once the alert is present
